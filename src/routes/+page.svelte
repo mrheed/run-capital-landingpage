@@ -1,7 +1,9 @@
 <script>
 	import About from '../components/About.svelte';
+	import Footer from '../components/Footer.svelte';
 	import Header from '../components/Header.svelte';
 	import Product from '../components/Product.svelte';
+	import Ready from '../components/Ready.svelte';
 	import RisetInovasi from '../components/RisetInovasi.svelte';
 </script>
 
@@ -10,6 +12,8 @@
 	<About />
   <Product />
   <RisetInovasi />
+  <Ready />
+  <Footer />
 </main>
 
 <style lang="postcss">

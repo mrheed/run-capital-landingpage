@@ -2,7 +2,7 @@
 	let sideMenu = ['Articles', 'Videos', 'White Papers'];
 	let activeMenu = 0;
 
-	let risetData = [
+	let articlesData = [
 		{
 			title: 'Bitcoin: Aset Bebas Risiko yang Unik?',
 			img: 'riset/1.jpg'
@@ -26,6 +26,39 @@
 		{
 			title: 'Blockchain dan Masa Depan Investasi',
 			img: 'riset/6.jpg'
+		}
+	];
+
+	let videosData = [
+		{
+			title: 'Transformasi Industri Keuangan',
+			tanggal: 'Jumat, Mar 21, 2024',
+			img: 'videos/1.jpg'
+		},
+		{
+			title: 'Meningkatkan Akses dan Kualitas Layanan ...',
+			tanggal: 'Jumat, Mar 21, 2024',
+			img: 'videos/2.jpg'
+		},
+		{
+			title: 'Masa Depan Energi Terbarukan',
+			tanggal: 'Jumat, Mar 21, 2024',
+			img: 'videos/3.jpg'
+		},
+		{
+			title: 'Kecerdasan Buatan dalam Keuangan',
+			tanggal: 'Jumat, Mar 21, 2024',
+			img: 'videos/4.jpg'
+		},
+		{
+			title: 'Memahami Online Perilaku Investor',
+			tanggal: 'Jumat, Mar 21, 2024',
+			img: 'videos/5.jpg'
+		},
+		{
+			title: 'Menggabungkan Teknologi dan Pertania...',
+			tanggal: 'Jumat, Mar 21, 2024',
+			img: 'videos/6.jpg'
 		}
 	];
 
@@ -73,8 +106,9 @@
 	$: activeMenu;
 </script>
 
-<div class="side-wrapper bg-gray-200">
-	<div class="px-16 py-24 grid grid-cols-5 gap-8">
+<div class="bg-slate-100 relative">
+  <img src="bg-video-section.png" class="absolute bottom-0" alt="bg video section">
+	<div class="side-wrapper mx-16 py-24 grid grid-cols-5 gap-8">
 		<div></div>
 		<div class="flex-1 col-span-4">
 			<div class="flex flex-between">
@@ -95,8 +129,8 @@
 		</ul>
 		<div class="grid grid-cols-3 gap-8 col-span-4">
 			{#if activeMenu == 0}
-				{#each risetData as data}
-					<div class="border border-gray-400 rounded-lg w-full">
+				{#each articlesData as data}
+					<div class="border border-gray-300 rounded-lg w-full">
 						<div style="height: 220px;">
 							<img
 								src={data.img}
@@ -112,9 +146,33 @@
 						</div>
 					</div>
 				{/each}
+			{:else if activeMenu == 1}
+				{#each videosData as data}
+					<div class="border border-gray-300 rounded-lg w-full video-card">
+						<div class="img-wrapper relative" style="height: 220px;">
+							<div
+								class="absolute"
+								style="z-index: 99; top: 50%; left: 50%; transform: translate(-50%, -50%)"
+							>
+								<img src="videos/play.png" alt="Play" />
+							</div>
+							<img
+								src={data.img}
+								alt={data.title}
+								class="w-full h-full"
+								style="object-fit: cover; object-position: center"
+							/>
+						</div>
+						<div class="px-6 py-8 flex flex-col gap-2">
+							<span class="font-light text-grey-600">{data.tanggal}</span>
+							<a href="#" class="text-2xl font-bold text-sky-900 hover:text-sky-600">{data.title}</a
+							>
+						</div>
+					</div>
+				{/each}
 			{:else if activeMenu == 2}
 				{#each whitePapersData as data}
-					<div class="border border-gray-400 rounded-lg w-full">
+					<div class="border border-gray-300 rounded-lg w-full">
 						<div style="height: 220px;">
 							<img
 								src={data.img}
@@ -134,3 +192,16 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	.video-card .img-wrapper::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #003852;
+		position: absolute;
+		opacity: 80%;
+	}
+</style>
