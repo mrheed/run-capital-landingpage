@@ -1,5 +1,6 @@
 <div class="relative">
-<div class="bg-header">
+<div class="">
+  <img src="bg-header.png" class="bg-header" alt="Bg Header">
 	<nav class="side-wrapper pt-6 items-center flex gap-5 justify-between">
 		<div class="logo">
 			<img src="logo.png" width="200px" alt="Logo" />
@@ -44,14 +45,11 @@
 </div>
 
 <style>
-	.bg-header::before {
-		content: '';
-		background: url('bg-header.png');
+	.bg-header {
     z-index: -1;
 		position: absolute;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+		object-position: center;
+		object-fit : cover;
 		width: 100%;
 		height: 100%;
     top: 0;
