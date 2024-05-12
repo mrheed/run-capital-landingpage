@@ -10,11 +10,15 @@
 <main>
 	<Header />
 	<About />
-  <Product />
-  <RisetInovasi />
-  <Ready />
-  <Footer />
+	<Product />
+	<RisetInovasi />
+	<Ready />
+	<Footer />
 </main>
+
+<head>
+  <title>Run Capital | Landing Page</title>
+</head>
 
 <style lang="postcss">
 	:global(html) {
