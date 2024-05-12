@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.side-wrapper {
+	padding-left: 6em;
+	padding-right: 6em;
+}
+
+.bg-navy {
+  background-color: #003852;
+}
