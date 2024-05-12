@@ -28,11 +28,11 @@
 		name="twitter:description"
 		content="Raih Kebebasan Finansial Dengan Langkah Yang Tepat"
 	/>
-	<meta name="twitter:image" content="{PUBLIC_BASE_URL}/bg-header.png" />
+	<meta name="twitter:image" content="{PUBLIC_BASE_URL}/logo.png" />
 	<meta property="og:title" content="Run Capital" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={PUBLIC_BASE_URL} />
-	<meta property="og:image:url" content="{PUBLIC_BASE_URL}/bg-header.png" />
+	<meta property="og:image:url" content="{PUBLIC_BASE_URL}/logo.png" />
 	<meta
 		property="og:description"
 		content="Raih Kebebasan Finansial Dengan Langkah Yang Tepat"
