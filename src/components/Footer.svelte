@@ -10,12 +10,12 @@
 			SUBSCRIBE
 		</button>
 		<div class="flex gap-4">
-			<div class="bg-social hover:bg-social p-4 cursor-pointer">
+			<a href="https://www.instagram.com/run_capital.id/" class="bg-social hover:bg-social p-4 cursor-pointer" target="_blank">
 				<img src="socials/instagram-small.png" alt="Instagram" />
-			</div>
-			<div class="bg-social hover:bg-social p-4 cursor-pointer">
+			</a>
+			<a href="https://www.tiktok.com/@run.capital?_t=8nqRwd1x0yo&_r=1" class="bg-social hover:bg-social p-4 cursor-pointer" target="_blank">
 				<img src="socials/tiktok-small.png" alt="Tiktok" />
-			</div>
+			</a>
 		</div>
 	</div>
 	<div class="grid grid-cols-3 gap-8 w-8/12">
